@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+var num, temp,i=2;
+function fun()
+{
+  num = parseInt(document.getElementById("num").value);
+  if(num)
+  {
+    temp = document.getElementById("cont");
+    temp.style.display = "block";
+    while(i<num){
+    if(num%i==0)
+      document.getElementById("res").innerHTML = "Prime";
+    else
+      document.getElementById("res").innerHTML = "Non Prime";
+  }
+}
+}
+</script>
+</head>
+<body>
+
+<p>Enter valid Number: <input id="num"><button onclick="fun()">Check</button></p>
+<p id="cont" style="display:none;">It is an <span id="res"></span> Number</p>
+
+</body>
+</html>

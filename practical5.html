@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Example</title>
+</head>
+<body>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email"><br>
+
+		<label for="mobile">Mobile Number:</label>
+		<input type="tel" id="mobile" name="mobile"><br>
+
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select><br>
+
+		<label for="color">Favorite Color:</label>
+		<input type="color" id="color" name="color"><br>
+
+		<button type="button" onclick="displayInfo()">Submit</button>
+	</form>
+
+	<textarea id="result" rows="5" cols="50"></textarea>
+
+	<script>
+		function displayInfo() {
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const mobile = document.getElementById('mobile').value;
+			const gender = document.getElementById('gender').value;
+			const color = document.getElementById('color').value;
+
+			const info = `Name: ${name}\nEmail: ${email}\nMobile Number: ${mobile}\nGender: ${gender}\nFavorite Color: ${color}`;
+
+			document.getElementById('result').value = info;
+		}
+	</script>
+</body>
+</html>
